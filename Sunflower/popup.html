@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      html {
+        display: table;
+        width: 100%;
+      }
+      body {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+      button {
+        background-color: orange;
+        border: none;
+      }
+    </style>
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="imgs/icon-128.png" />
+      <h1>Sunflower</h1>
+      <button>활성화</button>
+      <button>비활성화</button>
+    </header>
+    <br />
+    <form>
+      <label>금칙어를 설정하세요 - 쉼표 단위로 끊어주세요(,)</label> <br />
+      <textarea id="filter_box" name="filters" rows="4" cols="50"></textarea>
+      <button type="button" id="submit_button">Save</button>
+    </form>
+  </body>
+</html>
