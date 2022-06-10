@@ -1,0 +1,31 @@
+{
+  "name": "Sunflower",
+  "description": "Filters a discriminatory expression or hate comments",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "tabs", "activeTab", "scripting", "contextMenus"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/imgs/icon-24.png",
+      "48": "/imgs/icon-64.png",
+      "128": "/imgs/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "/imgs/icon-24.png",
+    "48": "/imgs/icon-64.png",
+    "128": "/imgs/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
